@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.bg1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+}
+
+#clock {
+  font-size: 10vw;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#date {
+  font-size: 3vw;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#controls {
+  position: fixed;
+  bottom: 10px;
+  right: 50px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 300px;
+}
+
+#controls.hidden {
+  display: none;
+}
+
+#controls label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+input,
+select {
+  background: #222;
+  color: white;
+  border: 1px solid #555;
+  padding: 3px;
+}
+
+footer {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 0.8em;
+  z-index: 1;
+}
+
+footer a {
+  color: white;
+}
+
+#toggleControls {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2em;
+  color: white;
+}

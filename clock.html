@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="et">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <link rel="stylesheet" href="clock.css" />
+    <script src="clock.js" defer></script>
+  </head>
+  <body>
+    <div class="background-container">
+      <div class="bg1"></div>
+    </div>
+    <div id="clock"></div>
+    <div id="date"></div>
+    <div id="controls" class="hidden">
+      <label>
+        Teksti värv:
+        <input type="color" id="textColorPicker" value="#ffffff" />
+      </label>
+      <label>
+        Taustapildi muutumise kiirus (sek):
+        <input type="range" id="bgSpeedSlider" min="20" max="60" value="40" />
+        <span id="bgSpeedValue">40</span>s
+      </label>
+      <label>
+        Fondi valik:
+        <select id="fontSelector">
+          <option value="Arial">Arial</option>
+          <option value="Courier New">Courier New</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Verdana">Verdana</option>
+          <option value="Tahoma">Tahoma</option>
+          <option value="Trebuchet MS">Trebuchet MS</option>
+          <option value="Times New Roman">Times New Roman</option>
+          <option value="Impact">Impact</option>
+          <option value="Comic Sans MS">Comic Sans MS</option>
+          <option value="Lucida Console">Lucida Console</option>
+          <option value="Palatino Linotype">Palatino Linotype</option>
+          <option value="Arial Black">Arial Black</option>
+          <option value="Segoe UI">Segoe UI</option>
+          <option value="Helvetica">Helvetica</option>
+          <option value="Open Sans">Open Sans</option>
+          <option value="Roboto">Roboto</option>
+        </select>
+      </label>
+      <label>
+        Fondi suurus:
+        <input type="range" id="fontSizeSlider" min="5" max="20" value="10" />
+        <span id="fontSizeValue">10</span>vw
+      </label>
+      <label>
+        Kella formaat:
+        <button id="toggleFormat">12h/24h</button>
+      </label>
+      <label>
+        <button id="changeBg">Vaheta taustapilti</button>
+      </label>
+      <label>
+        <input type="checkbox" id="toggleBgAuto" checked />
+        Automaatne taustapildivahetus
+      </label>
+    </div>
+
+    <button id="toggleControls">⚙️</button>
+    <footer>
+      <p>Autor: Martin Sütt</p>
+      <p>
+        <a href="https://github.com/martsutt/1kodutoo" target="_blank"
+          >Rakenduse repositoorium</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
